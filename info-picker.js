@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         信息抓取
 // @namespace    http://tampermonkey.net/
-// @version      0.0.1
+// @version      0.0.2
 // @description  文章、笔记信息抓取
 // @author       dabennn
 // @match        https://*.xiaohongshu.com/explore/*
