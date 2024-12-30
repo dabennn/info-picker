@@ -13,7 +13,7 @@
 // @match        https://*.toutiao.com/w/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @license      MIT
-// @grant        none
+// @grant        GM_notification
 // ==/UserScript==
 
 (function() {
