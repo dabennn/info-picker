@@ -14,6 +14,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @license      MIT
 // @grant        GM_notification
+// @grant        unsafeWindow
 // ==/UserScript==
 
 (function() {
@@ -127,13 +128,15 @@
     let textInfo = ''
     let copyInfo = ''
     if (window.location.href.includes('xiaohongshu.com/explore')) {
-      const state = window.__INITIAL_STATE__
+      const state = unsafeWindow.__INITIAL_STATE__
       const title = getElementText('.note-content .title')
       const author = getElementText('.username')
       let time = ''
       try {
         time = formatTimestamp(state.note.noteDetailMap[state.note.firstNoteId.value].note.lastUpdateTime)
-      } catch {}
+      } catch (e) {
+        console.error(e)
+      }
       const wordCount = getElementText('.note-content').length
       const likeNum = getElementText('.interact-container .like-wrapper .count')
       const commentNum = getElementText('.interact-container .chat-wrapper .count')
