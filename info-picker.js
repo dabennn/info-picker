@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         信息抓取
 // @namespace    http://tampermonkey.net/
-// @version      0.0.3
+// @version      0.0.4
 // @description  文章、笔记信息抓取
 // @author       dabennn
 // @match        https://*.xiaohongshu.com/explore/*
@@ -383,7 +383,7 @@
         author,
         title,
         window.location.href,
-        formatNumInfo([`点赞`, `评论`, `收藏`, `分享`]),
+        formatNumInfo([`点赞`, `转发`, `喜欢`, `评论`]),
         wordCount,
       ].join("\t");
     }
